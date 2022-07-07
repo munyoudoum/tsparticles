@@ -59,9 +59,11 @@ Once the scripts are loaded you can set up `tsParticles` like this:
 (async () => {
   await loadConfettiPreset(tsParticles); // this is required only if you are not using the bundle script
 
-  await tsParticles.load("tsparticles", {
+  const container = await tsParticles.load("tsparticles", {
     preset: "confetti",
   });
+  
+  await addConfetti(container);
 })();
 ```
 
